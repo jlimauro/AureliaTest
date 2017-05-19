@@ -1,0 +1,20 @@
+<template>
+    <require from="toastr/build/toastr.min.css"></require>
+    <h1>${title}</h1>
+    <br/>
+    
+     <form submit.trigger="addTodo()">
+        <input type="text" value.bind="newTodoDescription">
+        <button type="submit">Add Todo</button>
+    </form>
+    <br/>
+    <br>
+    <h3>Task List:</h3>
+    <ul>
+        <li repeat.for="todo of todos" style="margin-bottom:15px">
+            <input type="checkbox" checked.bind="todo.done" change.delegate="UpdateTask(todo)">
+            <span css="text-decoration: ${todo.done ? 'line-through' : 'none'}">${todo.description}</span>
+            <button click.delegate="removeTodo(todo)">Remove Todo</button>
+        </li>
+    </ul>
+</template>
