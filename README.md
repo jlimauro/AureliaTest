@@ -9,6 +9,7 @@ This repository is to test out an ASP.NET Core Single Page Application with an A
   * `dotnet new --install "Microsoft.AspNetCore.SpaTemplates::*"`
 * Install Node.js from https://nodejs.org
 * Install MongoDB from https://www.mongodb.com/download-center
+* Configure Webpack run `webpack --config webpack.config.vendor.js` then run `webpack`
 
 ## Restoring Project Dependencies
 
