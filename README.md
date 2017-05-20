@@ -34,4 +34,4 @@ Set your system environment to run in development mode. This will enable the aut
 
 ## Starting the Application
 
-To start application from command line, simply type `dotnet run`. Be sure to restore .NET Core packages and NodeJS packages before running application.  
+To start application from command line, simply type `dotnet run`. Be sure to restore .NET Core packages and NodeJS packages before running application. Using `dotnet watch run` will allow for automatic rebuild of when source files are changed.
