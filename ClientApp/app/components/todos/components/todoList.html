@@ -1,0 +1,10 @@
+<template>
+    <h3>Task List:</h3>
+    <ul>
+        <li repeat.for="t of parentElement.todos" style="margin-bottom:15px">
+            <input type="checkbox" checked.bind="t.done" change.delegate="UpdateTask(t)">
+            <span css="text-decoration: ${t.done ? 'line-through' : 'none'}">${t.description}</span>
+            <button click.delegate="removeTodo(t)">Remove Todo</button>
+        </li>
+    </ul>
+</template>

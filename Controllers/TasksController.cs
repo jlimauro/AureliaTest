@@ -44,16 +44,18 @@ namespace AureliaTest.Controllers
 
         // PUT api/Tasks
         [HttpPut]
-        public void Put([FromBody]Core.Models.Task task)
+        public IActionResult Put([FromBody]Core.Models.Task task)
         {
             repository.UpdateTask(task);
+            return Ok();
         }
 
         // DELETE api/Tasks
         [HttpDelete]
-        public void Delete([FromBody]Core.Models.Task task)
+        public IActionResult Delete([FromBody]Core.Models.Task task)
         {
-            repository.RemoveTask(task.Id);
+           repository.RemoveTask(task.Id);
+           return Ok();
         }
     }
 }
